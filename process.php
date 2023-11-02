@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Specify the file path where you want to save the XML
         $filePath = 'phonebook.xml';
-		$filePathSNOME = 'phonebook-sonme.xml';
+		$filePathSNOME = 'phonebook-snom.xml';
 		
         // Save the XML to a file
         file_put_contents($filePath, $xmlString);
