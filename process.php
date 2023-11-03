@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             return $xml->asXML();
         }
 		#DANI!!!!
-		function processPostDataSnome($postData) {
+		function processPostDataSnom($postData) {
 			// Create a SimpleXML object for the root element
             $xml = new SimpleXMLElement('<tbook></tbook>');
 
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $directoryEntry = $xml->addChild('item');
 
                 // Add Name and Telephone elements
-                $directoryEntry->addChild('Name', $item['name']);
+                $directoryEntry->addChild('name', $item['name']);
 
                 // Handle multiple 'phone' values if present
                 if (isset($item['phone'])) {
@@ -86,15 +86,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Assuming you have received $_POST data
         $xmlString = processPostData($_POST);
-		$xmlStringSnome = processPostDataSnome($_POST);
+		$xmlStringSnom = processPostDataSnom($_POST);
 
         // Specify the file path where you want to save the XML
         $filePath = 'phonebook.xml';
-		$filePathSNOME = 'phonebook-snom.xml';
+	$filePathSNOM = 'phonebook-snom.xml';
 		
         // Save the XML to a file
         file_put_contents($filePath, $xmlString);
-		file_put_contents($filePathSNOME, $xmlStringSnome);
+		file_put_contents($filePathSNOM, $xmlStringSnom);
 
         echo "XML data has been saved to $filePath";
         exit;
