@@ -19,7 +19,7 @@
             <table id="TaulaPhonebook">
                 <?php
                 $RowCount = 0;
-                $xml = simplexml_load_file("phonebook.xml") or die("Could not open file!");
+                $xml = simplexml_load_file("phonebook-yealink.xml") or die("Could not open file!");
                 foreach ($xml->children() as $phonebook) {
                     echo "<tr id='".$RowCount."-row'>";
                     foreach ($phonebook->children() as $contact) {
