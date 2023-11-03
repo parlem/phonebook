@@ -95,11 +95,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Save the XML to a file
         file_put_contents($filePath, $xmlString);
 		file_put_contents($filePathSNOM, $xmlStringSnom);
-
-        echo "XML data has been saved to $filePath";
+	    
+	echo "Agenda actualitzada correctament!";
+        echo "Agenda YEALINK: http://127.0.0.1/$filePath";
+	echo "Agenda SNOM: http://127.0.0.1/$filePathSNOM"    
         exit;
     } else {
-        echo "No valid 'item' data in the POST request.";
+        echo "Error 404 - Contactar amb sat1@parlem.com";
     }
 }
 ?>
