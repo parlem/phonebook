@@ -20,7 +20,7 @@
             <table id="TaulaPhonebook">
                 <?php
                 $RowCount = 0;
-                $xml = simplexml_load_file("phonebook-yealink.xml") or die("Could not open file!");
+                $xml = simplexml_load_file("phonebook-yealink.xml") or die("No es pot obrir l'arxiu, contactar amb sat1@parlem.com!");
                 foreach ($xml->children() as $phonebook) {
                     echo "<tr id='".$RowCount."-row'>";
                     foreach ($phonebook->children() as $contact) {
@@ -72,7 +72,7 @@
                 // Add data to c1 and c2
                 c1.innerHTML = "<input type='text' name='item["+RowCount+"][name]' value='"+name+"'>";
                 c2.innerHTML = "<input type='text' name='item["+RowCount+"][phone]' value='"+phone+"'>";
-                c3.innerHTML = "<button type='button' onclick='deleterow("+RowCount+")'>Delete</button>";
+                c3.innerHTML = "<button type='button' onclick='deleterow("+RowCount+")'>Eliminar</button>";
             }
 function deleterow(RowCount) {
     var row = document.getElementById(RowCount+'-row');
