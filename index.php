@@ -27,7 +27,7 @@
                             echo "<td><input type='text' name='item[" . $RowCount . "][name]' value='" . $contact . "'></td>";
                         }
                         if ($contact->getName() == "Telephone") {
-                            echo "<td><input type='text' name='item[" . $RowCount . "][phone]' value='" . $contact . "'></td><td><button type='button' onclick='deleterow(".$RowCount.")'>Delete</button></td>";
+                            echo "<td><input type='text' name='item[" . $RowCount . "][phone]' value='" . $contact . "'></td><td><button type='button' onclick='deleterow(".$RowCount.")'>Eliminar</button></td>";
                         }
                     }
                     echo "</tr>";
@@ -43,7 +43,7 @@
                     <td><button type='button' onclick='myFunction()'>Afegir</button></td>
                 </tr>
             </table>
-            <button type='submit' form='formulari' value='Submit'>Modificar</button>
+            <button type='submit' form='formulari' value='Submit'>Guardar</button>
         </form>
         <script>
             function myFunction() {
