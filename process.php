@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$xmlStringSnom = processPostDataSnom($_POST);
 
         // Specify the file path where you want to save the XML
-        $filePath = 'phonebook.xml';
+        $filePath = 'phonebook-yealink.xml';
 	$filePathSNOM = 'phonebook-snom.xml';
 		
         // Save the XML to a file
